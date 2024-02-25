@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>😉</title>
+    <link rel="shortcut icon" href="log.png" type="image/x-icon" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+      .parent {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+
+      .leftPane {
+        width: 100%;
+        display: flex;
+      }
+
+      .rightPane img {
+        height: 600px;
+        width: 700px;
+      }
+
+      .navbar {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .navbar #signup {
+        height: 40px;
+        width: 90px;
+        background-color: black;
+        color: white;
+        border: none;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-weight: bold;
+      }
+
+      .navbar a {
+        text-decoration: solid;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-weight: bold;
+      }
+
+      #inp {
+        padding: 20px;
+        height: 10px;
+        width: 80%;
+        border: 1.3px solid orange;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-weight: bold;
+      }
+
+      #inp:active {
+        box-shadow: 0px 0px 10px orange;
+        border: none;
+      }
+
+      #btn {
+        height: 51px;
+        width: 131px;
+        background-color: orange;
+        color: white;
+        border: none;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-weight: bold;
+      }
+
+      .power {
+        width: 40%;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        padding: 35px 83px;
+      }
+
+      .content .inpu {
+        margin-top: 60px;
+        display: flex;
+      }
+
+      .content h1,
+      h2 {
+        margin-top: 12px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+      }
+
+      .sectionB {
+        display: flex;
+        align-items: center;
+      }
+
+      #log {
+        margin-right: 12px;
+      }
+
+      .locate {
+        position: absolute;
+        left: 450px;
+        padding: 14px;
+      }
+
+      .content2 {
+        display: flex;
+        justify-content: space-around;
+        background-color: #2b1e16;
+        padding: 0px 150px;
+        height: 380px;
+      }
+
+      .subcont {
+        width: 20%;
+        align-items: center;
+        text-align: center;
+        color: white;
+        margin: 5px 12px;
+      }
+
+      .subcont img {
+        margin-bottom: 33px;
+      }
+
+      .subcont h3 {
+        margin-bottom: 17px;
+      }
+      .play {
+        width: 60%;
+      }
+      .mob {
+        width: 40%;
+      }
+
+      .bottom {
+        display: flex;
+      }
+
+      #down,
+      #dow {
+        position: relative;
+        top: 364px;
+        left: 152px;
+        margin: 0px 10px;
+      }
+
+      .desc {
+        position: relative;
+        top: 25px;
+        left: 70px;
+        padding: 89px;
+      }
+    </style>
+    <script>
+      let a = [
+        { data: "Are you Hungary?" },
+        { data: "Are you in the party!" },
+        { data: "unexpected guests arrived" },
+        { data: "Good Food good mood" },
+      ];
+      let ele = document.getElementById("inp");
+      setInterval(() => {
+        document.getElementById("heading").innerText =
+          a[Math.trunc(Math.random() * 5)].data;
+      }, 3000);
+      // setInterval(()=>{
+      //     for(let i=0;i<a.length;i++)
+      //     {
+      //         setInterval(()=>{document.getElementById('heading').innerText==a[i].data},1000)
+      //     }
+      // },5000)
+      func = () => {
+        ele.style.border = "4px solid orange";
+      };
+    </script>
+  </head>
+  <body>
+    <div class="parent">
+      <div class="rightPane">
+        <img src="Lunch1_vlksgq.webp" alt="Offline" />
+      </div>
+      <div class="leftPane"></div>
+    </div>
+    <div class="power">
+      <div class="navbar">
+        <div class="sectionA">
+          <img height="80" width="220" src="logo.png" alt="Logo" />
+        </div>
+        <div class="sectionB">
+          <a href="" id="log">Login</a>
+          <button id="signup">Sign up</button>
+        </div>
+      </div>
+      <div class="content">
+        <h1 id="heading" style="margin-top: 40px; font-weight: bold">
+          Hungry?
+        </h1>
+        <h2 style="color: gray; margin-top: 12px; font-size: large">
+          Order food from favourite restaurants near you.
+        </h2>
+        <div class="inpu">
+          <div class="locate">
+            <p style="color: gray">🎯Locate Me</p>
+          </div>
+          <input
+            onclick="func()"
+            maxlength="30"
+            id="inp"
+            type="text"
+            placeholder="Enter your delivery location"
+          />
+          <button id="btn"><b>Find Food</b></button>
+        </div>
+        <h3
+          style="
+            margin-top: 40px;
+            color: rgba(128, 128, 128, 0.815);
+            font-weight: none;
+          "
+        >
+          POPULAR CITIES IN INDIA
+        </h3>
+        <h3
+          style="
+            margin-top: 15px;
+            color: rgba(128, 128, 128, 0.808);
+            font-weight: none;
+          "
+        >
+          Ahmedabad Bangalore Chennai Delhi Gurgaon Hyderabad Kolkata Mumbai
+          Pune& more.
+        </h3>
+      </div>
+    </div>
+    <div class="content2">
+      <div class="subcont">
+        <img height="200" width="110" src="down1.avif" alt="" />
+        <h3>No Minimum Order</h3>
+        <p>
+          Order in for yourself or for the group, with no restrictions on order
+          value
+        </p>
+      </div>
+      <div class="subcont">
+        <img height="200" width="110" src="down2.avif" alt="" />
+        <h3>Live Order Tracking</h3>
+        <p>
+          Know where your order is at all times, from the restaurant to your
+          doorstep
+        </p>
+      </div>
+      <div class="subcont">
+        <img height="200" width="120" src="down3.avif" alt="" />
+        <h3>Lightning-Fast Delivery</h3>
+        <p>
+          Experience Swiggy's superfast delivery for food delivered fresh & on
+          time
+        </p>
+      </div>
+    </div>
+    <div class="bottom">
+      <div class="mob">
+        <a href=""
+          ><img id="down" height="60" width="190" src="play_ip0jfp" alt=""
+        /></a>
+        <a href=""
+          ><img id="dow" height="60" width="190" src="iOS_ajgrty" alt=""
+        /></a>
+        <div class="desc">
+          <h1 style="font-weight: bold">Restaurants in your pocket</h1>
+          <h2>
+            Order from your favorite restaurants & track on the go, with the
+            all-new Swiggy app.
+          </h2>
+        </div>
+      </div>
+      <div class="play">
+        <img height="500" width="400" src="pixel_wbdy4n" alt="" />
+        <img height="500" width="400" src="iPhone_wgconp_j0d1fn" alt="" />
+      </div>
+    </div>
+  </body>
+</html>
